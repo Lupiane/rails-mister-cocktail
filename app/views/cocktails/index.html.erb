@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="card">
+          <h1 class="text-center">Choose a cocktail</h1>
+          <ul class="list-unstyled" id="restaurant-list">
+            <% @cocktails.order(:name).each do |cocktail| %>
+              <li>
+                <ul class="list-inline">
+                  <li><%= link_to cocktail.name.downcase, cocktail_path(cocktail) %></li>
+                </ul>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="card">
+          <h3 class="text-center"><%= link_to "Add a new cocktail", new_cocktail_path %></p></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
