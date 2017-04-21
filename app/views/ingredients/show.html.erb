@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="card">
+          <h1>See all cocktails containing <%= @ingredient.name %></h1>
+          <ul class="list-unstyled text-center">
+            <% @ingredient.cocktails.each do |cocktail| %>
+              <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

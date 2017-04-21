@@ -1,0 +1,27 @@
+.card {
+  color: #55595B;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 1px 1px 1px #d4d5d6;
+  padding: 15px;
+  margin: 15px;
+}
+.card a {
+  color: #55595B;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.wrapper {
+  background-color: #edf0f2;
+}
+.card ul {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 3px;
+}
+.card h3 {
+  margin: 15px auto;
+}
+.card h1, h2, h3 {
+  text-align: center;
+}
