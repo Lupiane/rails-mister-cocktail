@@ -3,8 +3,9 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
         <div class="card">
-          <h1>See all cocktails containing <%= @ingredient.name %></h1>
-          <ul class="list-unstyled text-center">
+          <h1>See all cocktails containing:</h1>
+          <h2 id="blue-font"> <%= @ingredient.name %></h2>
+          <ul class="list-unstyled text-center" id="ingredient-list">
             <% @ingredient.cocktails.each do |cocktail| %>
               <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
             <% end %>
@@ -14,3 +15,5 @@
     </div>
   </div>
 </div>
+
+

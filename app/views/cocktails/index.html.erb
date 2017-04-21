@@ -1,12 +1,16 @@
 <div class="wrapper">
   <div class="container">
     <div class="row">
-      <h1 class="text-center">Choose a cocktail</h1>
+      <h1 class="text-center" >Choose a cocktail</h1>
       <% @cocktails.order(:name).each do |cocktail| %>
         <div class="col-xs-12 col-sm-4">
           <div class="card">
-            <div class="card-category"><%= link_to cocktail.name.downcase, cocktail_path(cocktail) %></div>
-            <img class="card-user avatar" src="user.jpg">
+            <div class="card-category"><strong><%= link_to cocktail.name.downcase.capitalize, cocktail_path(cocktail) %></strong></div>
+            <div class="card-thumbnail">
+              <% if cocktail.photo? %>
+                <%= cl_image_tag cocktail.photo.path, width: 150, height: 150, crop: :fill, radius: "max" %>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>

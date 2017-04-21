@@ -1,25 +1,31 @@
 <div class="wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="col-xs-12 col-sm-6 ">
         <div class="card">
           <h1><%= @cocktail.name %></h1>
           <hr>
           <h3>Recipe</h3>
           <ul class="list-unstyled text-center">
             <% @cocktail.doses.each do |dose| %>
-              <li><%= dose.description %> <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %> <%= link_to "delete", dose_path(dose),
+              <li><%= dose.description %> <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %>   (<%= link_to "delete", dose_path(dose),
                 method: :delete,
-                data: { confirm: "Are you sure?" } %></li>
+                data: { confirm: "Are you sure?" } %>)</li>
             <% end %>
           </ul>
-        </div>
-        <div class="card padded text-center">
-          <h3>Add a new dose</h3>
-          <%= render "doses/form" %>
-        </div>
+          <div class="text-center">
+            <% if @cocktail.photo? %>
+              <%= cl_image_tag @cocktail.photo.path, width: 300, height: 300, crop: :fill %>
+            <% end %>
+          </div>
         </div>
       </div>
+        <div class="col-xs12 col-sm-4 col-sm-offset-1">
+          <div class="card">
+            <h3>Add a new dose</h3>
+            <%= render "doses/form" %>
+          </div>
+        </div>
     </div>
   </div>
 </div>

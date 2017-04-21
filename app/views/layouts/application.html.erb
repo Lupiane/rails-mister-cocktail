@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>SeriousCocktailsByPauline</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= cloudinary_js_config %>
   </head>
 
   <body>
-  <div class="navbar-wagon">
-    <h1> <i class="fa fa-glass" aria-hidden="true"></i>  serious cocktails </h1>
+  <div class="navbar-wagon" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('assets/cocktails.jpeg');">
+    <h1 id="silent-link"> <i class="fa fa-glass" aria-hidden="true"></i>  <%= link_to "serious cocktails", root_path %> </h1>
     <%= link_to "Home", root_path, class: "navbar-wagon-link" %>
   </div>
     <%= yield %>

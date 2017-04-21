@@ -9,7 +9,7 @@
 .card a {
   color: #55595B;
   text-decoration: none;
-  transition: 0.5s ease;
+  transition: 0.7s ease;
 }
 .wrapper {
   background-color: #edf0f2;
@@ -24,4 +24,14 @@
 }
 .card h1, h2, h3 {
   text-align: center;
+}
+.card-thumbnail {
+  text-align: center;
+}
+.card-category {
+  text-align: center;
+  padding-bottom: 15px;
+}
+#delete-link {
+  font-size: 14px;
 }
