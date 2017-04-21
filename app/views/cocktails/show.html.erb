@@ -15,7 +15,7 @@
           </ul>
           <div class="text-center">
             <% if @cocktail.photo? %>
-              <%= cl_image_tag @cocktail.photo.path, width: 300, height: 300, crop: :fill %>
+              <%= cl_image_tag @cocktail.photo.path, width: 300, height: 300, crop: :fill, radius: "25:0" %>
             <% end %>
           </div>
         </div>
